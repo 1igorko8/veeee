@@ -1,0 +1,130 @@
+#outside {
+   z-index: 1;
+   position: absolute;
+   background-color: lightgray;
+   width: 100%;
+   height: 100%;
+   text-align: center;
+   transition: 1s;
+   transform-origin: 0;
+}
+
+.open-card {
+   transform: rotateY(90deg);
+}
+
+#outside-title {
+   color: black;
+   font-family: Courier;
+   font-size: 12pt;
+   text-align: center;
+}
+
+#outside-pic {
+   width: 250px;
+   height: 250px;
+}
+
+#outside-help {
+   color: black;
+   font-family: Courier;
+   font-size: 12pt;
+   text-align: center;
+   padding: 20px;
+}
+
+#inside {
+   z-index: 0;
+   position: absolute;
+   background-color: white;
+   width: 100%;
+   height: 100%;
+   text-align: center;
+}
+
+#inside-title {
+   color: black;
+   font-family: Courier;
+   font-size: 12pt;
+   text-align: center;
+}
+
+#inside-pic {
+   width: 250px;
+   height: 250px;
+}
+
+#message {
+   color: black;
+   font-family: Courier;
+   font-size: 15pt;
+   text-align: center;
+   margin: 0 auto;
+   width: 60%;
+   padding: 20px;
+   
+}
+
+button {
+   background: silver;
+}
+body {
+   margin: 0;
+   padding: 0;
+   background-color: #f9e9e9;
+}
+
+#hearts {
+   position: fixed;
+   top: 0;
+   left: 0;
+   height: 100%;
+   width: 100%;
+   z-index: -1;
+   transform: rotate(45deg);
+}
+
+.heart {
+   display: block;
+   position: absolute;
+   width: 50px;
+   height: 50px;
+   background-color: #fc2d79;
+   animation: pulse 1s ease-in-out infinite;
+}
+
+.heart::before,
+.heart::after {
+   content: "";
+   position: absolute;
+   background-color: #fc2d79;
+   border-radius: 50% 50% 0 50%;
+}
+
+.heart::before {
+   width: 50px;
+   height: 50px;
+   top: -25px;
+   left: 0;
+}
+
+.heart::after {
+   width: 50px;
+   height: 50px;
+   top: 0;
+   left: -25px;
+}
+
+@keyframes pulse {
+   0% {
+      transform: scale(1);
+   }
+
+   50% {
+      transform: scale(1.2);
+   }
+
+   100% {
+      transform: scale(1);
+   }
+}
